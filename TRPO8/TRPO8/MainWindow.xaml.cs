@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TRPO8.Pages;
 
 namespace TRPO8
 {
@@ -19,7 +20,7 @@ namespace TRPO8
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new ListPage());
+            MainFrame.Navigate(new Vhod());
         }
     }
 }
