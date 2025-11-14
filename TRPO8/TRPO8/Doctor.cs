@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TRPO7
+namespace TRPO8
 {
     public class Doctor : INotifyPropertyChanged
     {

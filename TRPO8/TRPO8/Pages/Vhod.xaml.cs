@@ -15,7 +15,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
-using TRPO7;
 
 namespace TRPO8.Pages
 {
@@ -57,7 +56,12 @@ namespace TRPO8.Pages
                     MessageBox.Show("Неверный пароль!");
                     return;
                 }
+                LoginDoctor.LastName = doctor.LastName;
+                LoginDoctor.Name = doctor.Name;
+                LoginDoctor.MiddleName = doctor.MiddleName;
+                LoginDoctor.Specialisation = doctor.Specialisation;
                 MessageBox.Show("Успешный вход!");
+                NavigationService.Navigate(new MainScreen(LoginDoctor));
             }
             catch (Exception ex)
             {
