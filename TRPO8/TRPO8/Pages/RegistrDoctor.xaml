@@ -27,8 +27,8 @@
                 <Label Content="Подтверждение пароля:"/>
             </StackPanel>
         <StackPanel Grid.Column="1">
-                <TextBox Text="{Binding ReadDoctor.Name}" Margin="4" Width="150px"/>
                 <TextBox Text="{Binding ReadDoctor.LastName}" Margin="4" Width="150px"/>
+                <TextBox Text="{Binding ReadDoctor.Name}" Margin="4" Width="150px"/>
                 <TextBox Text="{Binding ReadDoctor.MiddleName}" Margin="4" Width="150px"/>
                 <TextBox Text="{Binding ReadDoctor.Specialisation}" Margin="4" Width="150px"/>
                 <TextBox Text="{Binding ReadDoctor.Password}" Margin="4" Width="150px"/>

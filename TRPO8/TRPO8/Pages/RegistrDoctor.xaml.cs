@@ -23,14 +23,12 @@ namespace TRPO8.Pages
     /// </summary>
     public partial class RegistrDoctor : Page
     {
-        private Doctor _doctor;
         public Doctor ReadDoctor { get; set; }
         public Doctor PasswordDoctor { get; set; }
         public RegistrDoctor()
         {
             ReadDoctor = new Doctor();
             PasswordDoctor = new Doctor();
-            _doctor = new Doctor();
             InitializeComponent();
             DataContext = this;
         }
@@ -59,6 +57,7 @@ namespace TRPO8.Pages
             var jsonString = JsonSerializer.Serialize(ReadDoctor);
             File.WriteAllText($"D_{ReadDoctor.ID}.txt", jsonString);
             MessageBox.Show($"Регистрация успешна!\nВаш ID: {ReadDoctor.ID}");
+            NavigationService.GoBack();
         }
         private int GenerateUniqueDoctorId()
         {
