@@ -24,11 +24,12 @@
                     <Label Content="Фамилия:"/>
                     <Label Content="Имя:"/>
                     <Label Content="Отчество:"/>
-                    <Label Content="Номер телефона:"/>
-                    <Label Content="Посещение: "/>
-                    <Label Content="Индентификатор доктора: "/>
-                    <Label Content="Диагноз: "/>
-                    <Label Content="Рекомендации: "/>
+                    <Label Content="Дата рождения:" Margin="1"/>
+                    <Label Content="Номер телефона:" Margin="1"/>
+                    <Label Content="Посещение: " Margin="1"/>
+                    <Label Content="Индентификатор доктора: " Margin="1"/>
+                    <Label Content="Диагноз: " Margin="1"/>
+                    <Label Content="Рекомендации: " Margin="1"/>
                     <Button Click="ZapisPacientButton_Click" Content="Записать прием" Margin="4"/>
                     <Button Click="IzmeneniePacientButton_Click" Content="Изменить информацию" Margin="4"/>
                     <Button Click="BackButton_Click" Content="Назад"  Margin="4"/>
@@ -38,6 +39,7 @@
                     <TextBox Text="{Binding ZapisPacient.LastName}" Margin="4" IsEnabled="False"/>
                     <TextBox Text="{Binding ZapisPacient.Name}" Margin="4" IsEnabled="False"/>
                     <TextBox Text="{Binding ZapisPacient.MiddleName}" Margin="4" IsEnabled="False"/>
+                    <DatePicker SelectedDate="{Binding ZapisPacient.Birthday}" Margin="4" IsEnabled="False"/>
                     <TextBox Text="{Binding ZapisPacient.PhoneNumber}" Margin="4" IsEnabled="False"/>
                     <DatePicker SelectedDate="{Binding Appointment}" Margin="4"/>
                     <TextBox Text="{Binding CurrentDoctor.ID}" Margin="4" IsEnabled="False"/>
@@ -58,7 +60,7 @@
                                 <TextBlock Text="Рекомендации: "/>
                             </StackPanel>
                             <StackPanel>
-                                <TextBlock Text="{Binding Appointment, StringFormat='Дата {0:dd.MM.yyyy}'}"/>
+                                <TextBlock Text="{Binding Appointment, StringFormat=' {0:dd.MM.yyyy}'}"/>
                                 <TextBlock Text="{Binding IDDoctor}"/>
                                 <TextBlock Text="{Binding Diagnosis}"/>
                                 <TextBlock Text="{Binding Recomendations}"/>

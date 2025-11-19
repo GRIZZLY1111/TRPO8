@@ -52,6 +52,7 @@
                                 <TextBlock Text="Фамилия: "/>
                                 <TextBlock Text="Имя: "/>
                                 <TextBlock Text="Отчество: "/>
+                                <TextBlock Text="Дата рождения: "/>
                                 <TextBlock Text="Номер телефона: "/>
                             </StackPanel>
                             <StackPanel>
@@ -59,6 +60,7 @@
                                 <TextBlock Text="{Binding LastName}"/>
                                 <TextBlock Text="{Binding Name}"/>
                                 <TextBlock Text="{Binding MiddleName}"/>
+                                <TextBlock Text="{Binding Birthday, StringFormat=' {0:dd.MM.yyyy}'}"/>
                                 <TextBlock Text="{Binding PhoneNumber}"/>
                             </StackPanel>
                         </StackPanel>

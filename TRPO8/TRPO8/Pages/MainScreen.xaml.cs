@@ -69,13 +69,5 @@ namespace TRPO8.Pages
                 Pacients.Add(pacient);
             }
         }
-
-
-        public event PropertyChangedEventHandler? PropertyChanged;
-
-        protected void OnPropertyChanged([CallerMemberName] string? propName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
-        }
     }
 }
